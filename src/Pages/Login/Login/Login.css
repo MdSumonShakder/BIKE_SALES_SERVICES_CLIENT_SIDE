@@ -1,0 +1,21 @@
+.login input {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 8px 20px;
+    border: 2px solid gold;
+    border-radius: 18px;
+    outline: none;
+  }
+  
+  input[type="submit"] {
+    background-color: #ff00ff;
+    color: #fff;
+    padding: 7px 40px;
+    font-weight: 700;
+    border: none;
+  }
+  
+  .login{
+    margin-bottom: 30px;
+    margin-top: 130px;
+  }
