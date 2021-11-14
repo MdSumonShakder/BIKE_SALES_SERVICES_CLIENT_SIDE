@@ -11,12 +11,7 @@ import Gallery from "./Pages/Home/Gallery/Gallery";
 import Order from './Pages/Order/Order';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Explores from './Pages/Explore/Explores/Explores';
-import AddServices from "./Pages/AddServices/AddServices";
-import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
-import MyOrders from "./Pages/Dashboard/MyOrders/MyOrders";
-
-
-
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 
 
 
@@ -48,18 +43,12 @@ function App() {
             <Route exact path="/explore">
               <Explores></Explores>
             </Route>
-            <Route exact path="/addServices">
-              <AddServices></AddServices>
-            </Route>
-            <PrivateRoute exact path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>
             <PrivateRoute exact path="/order/:key">
               <Order></Order>
             </PrivateRoute>
-            <Route exact path="/myOrders">
-              <MyOrders></MyOrders>
-            </Route>
             <Route path="*">
               <Notfound></Notfound>
             </Route>

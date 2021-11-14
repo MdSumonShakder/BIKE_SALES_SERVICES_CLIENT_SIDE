@@ -7,10 +7,10 @@ const Order = () => {
   const [details, setDetails] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${key}`)
+    fetch(`https://whispering-basin-37190.herokuapp.com/products/${key}`)
       .then((res) => res.json())
       .then((data) => setDetails(data));
-  }, []);
+  }, [key]);
 
   return (
     <div className="mt-5 pt-5">

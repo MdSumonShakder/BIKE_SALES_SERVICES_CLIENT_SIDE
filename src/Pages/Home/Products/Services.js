@@ -6,11 +6,19 @@ import './Services.css';
 
 const Services = () => {
   const [services, setServices] = useState([]);
+  const [page,setPage]=useState(0);
+  const size=6;
   useEffect(() => {
-    fetch('http://localhost:5000/users')
+    fetch(`https://whispering-basin-37190.herokuapp.com/products?page=${page}&&size=${size}`)
       .then(res => res.json())
-      .then(data => setServices(data));
-  }, []);
+      .then(data =>{
+        setServices(data.products);
+        const count=data.count;
+        const pageNumber=Math.ceil(count/size);
+        setPage(pageNumber);
+      });
+     
+  }, [page]);
 
 
   

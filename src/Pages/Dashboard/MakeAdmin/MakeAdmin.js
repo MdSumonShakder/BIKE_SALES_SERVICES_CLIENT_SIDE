@@ -1,6 +1,7 @@
-import { Button, TextField, Alert } from '@mui/material';
+import { TextField, Button, Alert } from '@mui/material';
 import React, { useState } from 'react';
 import useAuth from './../../../hooks/useAuth';
+
 
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
@@ -12,7 +13,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('https://stark-caverns-04377.herokuapp.com/users/admin', {
+        fetch('https://whispering-basin-37190.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,
@@ -29,13 +30,15 @@ const MakeAdmin = () => {
             })
 
         e.preventDefault()
-    }
+    };
+
     return (
         <div>
             <h2>Make an Admin</h2>
+          
             <form onSubmit={handleAdminSubmit}>
                 <TextField
-                    sx={{ width: '50%' }}
+                    sx={{ width: '30%' }}
                     label="Email"
                     type="email"
                     onBlur={handleOnBlur}

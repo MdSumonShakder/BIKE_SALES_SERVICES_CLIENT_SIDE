@@ -4,12 +4,14 @@ import { useHistory } from 'react-router';
 
 
 
+
 const Service = ({ service }) => {
   const { _id, name, img, description, price } = service;
   const history = useHistory();
   const clickedDetails = id => {
     const uri = `/order/${id}`;
     history.push(uri);
+
   };
 
   return (

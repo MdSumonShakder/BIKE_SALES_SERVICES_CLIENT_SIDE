@@ -18,8 +18,8 @@ const Banner = () => {
       alt="First slide"
     />
     <Carousel.Caption>
-    <h3 className="text-warning fw-bolder ">Once you see it, You can't take your eyes off it...</h3>
-      <p className=" text-white fw-bolder">Stock limited ....</p>
+    <h3 className="fw-bolder ">Once you see it, You can't take your eyes off it...</h3>
+      <p className=" text-warning fw-bolder">Stock limited ....</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -29,8 +29,8 @@ const Banner = () => {
       alt="First slide"
     />
     <Carousel.Caption>
-    <h3 className="text-warning fw-bolder ">Once you see it, You can't take your eyes off it...</h3>
-      <p className=" text-white fw-bolder">Stock limited ....</p>
+    <h3 className="fw-bolder ">Once you see it, You can't take your eyes off it...</h3>
+      <p className="text-dark fw-bolder">Stock limited ....</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -40,8 +40,8 @@ const Banner = () => {
       alt="First slide"
     />
     <Carousel.Caption>
-    <h3 className="text-warning fw-bolder ">Once you see it, You can't take your eyes off it...</h3>
-      <p className=" text-white fw-bolder">Stock limited ....</p>
+    <h3 className="fw-bolder ">Once you see it, You can't take your eyes off it...</h3>
+      <p className=" text-warning fw-bolder">Stock limited ....</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -51,8 +51,8 @@ const Banner = () => {
       alt="First slide"
     />
     <Carousel.Caption>
-    <h3 className="text-warning fw-bolder ">Once you see it, You can't take your eyes off it...</h3>
-      <p className=" text-white fw-bolder">Stock limited ....</p>
+    <h3 className="fw-bolder ">Once you see it, You can't take your eyes off it...</h3>
+      <p className=" text-warning fw-bolder">Stock limited ....</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -62,8 +62,8 @@ const Banner = () => {
       alt="First slide"
     />
     <Carousel.Caption>
-    <h3 className="text-warning fw-bolder ">Once you see it, You can't take your eyes off it...</h3>
-      <p className=" text-white fw-bolder">Stock limited ....</p>
+    <h3 className="fw-bolder ">Once you see it, You can't take your eyes off it...</h3>
+      <p className=" text-dark fw-bolder">Stock limited ....</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

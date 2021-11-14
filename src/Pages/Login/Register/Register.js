@@ -6,6 +6,7 @@ import {Button} from "react-bootstrap";
 const Register = () => {
   const [loginData, setLoginData] = useState({});
   const history = useHistory();
+  
   const { user, registerUser, authError} = useAuth();
 
   const handleOnBlur = e => {
@@ -20,23 +21,6 @@ const Register = () => {
       alert("Your password did not match");
       return;
     };
-
-// /// collect data ///
-// const users={
-//   ...loginData,
-// };
-// //// send to server ////
-// fetch('http://localhost:5000/users',{
-//   method:'POST',
-//   headers:{
-//     'content-type' : 'application/json'
-//   },
-//   body:JSON.stringify(users)
-// })
-// .then(res=>res.json())
-// .then(data=>{
-//   console.log(data);
-// });
 
     registerUser(loginData.email, loginData.password, loginData.name, history);
     e.preventDefault();

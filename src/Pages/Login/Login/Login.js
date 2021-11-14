@@ -16,27 +16,9 @@ const Login = () => {
     const value = e.target.value;
     const newLoginData = { ...loginData };
     newLoginData[field] = value;
- 
     setLoginData(newLoginData);
   };
   const handleLoginSubmit = e => {
-/// collect data ///
-const users={
-  ...loginData,
-}
-
-//// send to server ////
-fetch('http://localhost:5000/users',{
-  method:'POST',
-  headers:{
-    'content-type' : 'application/json'
-  },
-  body:JSON.stringify(users)
-})
-.then(res=>res.json())
-.then(data=>{
-  console.log(data);
-});
     loginUser(loginData.email, loginData.password, location, history);
     e.preventDefault();
   };
@@ -44,26 +26,6 @@ fetch('http://localhost:5000/users',{
   const handleGoogleSignIn = () => {
     signInWithGoogle(location, history);
 
-/// collect data ///
-const users={
-  ...loginData,
-  
-}
-
-//// send to server ////
-fetch('http://localhost:5000/users',{
-  method:'POST',
-  headers:{
-    'content-type' : 'application/json'
-  },
-  body:JSON.stringify(users)
-})
-.then(res=>res.json())
-.then(data=>{
-  console.log(data);
-});
-
-    
   };
   return (
     <div className="login">
@@ -92,7 +54,7 @@ fetch('http://localhost:5000/users',{
         {authError && <alert severity="error"> {authError} </alert>}
       </form>
       <br />
-      <div>---------or----------</div> <br />
+      <b className="text-danger ">---------Or----------</b> <br />
       <div className="login mt-3">
         <button
           onClick={handleGoogleSignIn}

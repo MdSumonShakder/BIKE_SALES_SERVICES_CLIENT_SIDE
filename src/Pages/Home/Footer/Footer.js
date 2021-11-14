@@ -6,6 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -34,9 +35,9 @@ const Footer = () => {
             <div className="footer-text">
                 <h5>Our Special  Services</h5>
                 <ul>
-                <li>Free Servicing</li>
-                  <li>Free Delivery</li>
-                  <li>10 Litre Free Petrol</li>
+                <li>Free Servicing ,</li>
+                  <li>Free Delivery ,,</li>
+                  <li>10 Litre Free Petrol...</li>
                 </ul>
               </div>
             </div>

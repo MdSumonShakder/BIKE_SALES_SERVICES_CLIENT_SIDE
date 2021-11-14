@@ -4,9 +4,9 @@ import Explore from "./../Explore/Explore";
 const Explores = () => {
   const [explores, setExplores] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/users')
+    fetch('https://whispering-basin-37190.herokuapp.com/products')
       .then((res) => res.json())
-      .then((data) => setExplores(data));
+      .then((data) => setExplores(data.products));
   }, []);
 
   return (
