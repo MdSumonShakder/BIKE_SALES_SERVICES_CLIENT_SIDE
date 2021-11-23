@@ -6,8 +6,8 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 import './Footer.css';
-import { Link } from 'react-router-dom';
 
+import Bounce from 'react-reveal/Bounce';
 
 const Footer = () => {
   return (
@@ -46,10 +46,20 @@ const Footer = () => {
           </div> 
         </div>
         <div className="icon">
-          <a href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook} /></a>
-          <a href="https://www.instagram.com/"><FontAwesomeIcon icon={faInstagram} /></a>
-          <a href="https://github.com/"><FontAwesomeIcon icon={faGithub} /></a>
-          <a href="https://www.youtube.com/channel/UCLD9CflKsqVox6JZLbKpt0Q"><FontAwesomeIcon icon={faYoutube} /></a>
+        <Bounce left cascade>
+        <a href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook} /></a>
+        </Bounce>
+        <Bounce top cascade>
+        <a href="https://www.instagram.com/"><FontAwesomeIcon icon={faInstagram} /></a>
+        </Bounce>
+        <Bounce bottom cascade>
+        <a href="https://github.com/"><FontAwesomeIcon icon={faGithub} /></a>
+        </Bounce>
+        <Bounce right cascade>
+        <a href="https://www.youtube.com/channel/UCLD9CflKsqVox6JZLbKpt0Q"><FontAwesomeIcon icon={faYoutube} /></a>
+        </Bounce>
+        
+         
         </div>
       </div>
     </div>
