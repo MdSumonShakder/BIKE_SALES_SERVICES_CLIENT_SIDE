@@ -25,7 +25,6 @@ if(isLoading){
             <Nav.Link className="text-white man" as={HashLink} to="/home#home">Home</Nav.Link>
             <Nav.Link className="text-white man" as={HashLink} to="/home#banner">Banner</Nav.Link>
             <Nav.Link className="text-white man" as={HashLink} to="/home#services">Products</Nav.Link>
-            <Nav.Link className="text-white man" as={HashLink} to="/home#reviews">Reviews</Nav.Link>
             <Nav.Link className="text-white man" as={HashLink} to="/home#gallery">Gallery</Nav.Link>
             <Nav.Link className="text-white man" as={HashLink} to="/explore">Explore</Nav.Link>
             <Nav.Link className="text-white man" as={HashLink} to="/home#footer">Footer</Nav.Link>
