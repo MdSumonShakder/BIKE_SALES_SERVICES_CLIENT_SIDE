@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import './Explore.css';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 
 
 
 const Explore = ({ explore }) => {
   const { _id, name, img, description, price } = explore;
-  const history = useHistory();
+  const navigate = useNavigate();
   const clickedDetails = id => {
     const uri = `/order/${id}`;
-    history.push(uri);
+    navigate.push(uri);
     
    
   }

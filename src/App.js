@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import Home from "./Pages/Home/Home/Home";
@@ -12,6 +12,12 @@ import Order from './Pages/Order/Order';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Explores from './Pages/Explore/Explores/Explores';
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import Pay from "./Pages/Dashboard/Pay/Pay";
+import Review from "./Pages/Dashboard/ReviewBox/Review";
+import MyOrders from "./Pages/Dashboard/MyOrders/MyOrders";
+import AdminRoute from "./Pages/Login/AdminRoute/AdminRoute";
+import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
+import AddServices from "./Pages/Dashboard/AddServices/AddServices";
 
 
 
@@ -21,38 +27,48 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
         <Navigation></Navigation>
-          <Switch>
-            <Route exact path="/">
-              <Home></Home>
+          <Routes>
+            <Route exact path="/" element={ <Home/>}>
             </Route>
-            <Route path="/home">
-              <Home></Home>
+            <Route path="/home" element={<Home/>}>
             </Route>
-            <Route exact path="/login">
-              <Login></Login>
+            <Route exact path="/login" element={ <Login/>}>
             </Route>
-            <Route exact path="/register">
-              <Register></Register>
+            <Route exact path="/register" element={<Register/>}>
             </Route>
-            <Route exact path="/reviews">
-              <Reviews></Reviews>
+            <Route exact path="/reviews" element={<Reviews/>}>
             </Route>
-            <Route exact path="/gallery">
-              <Gallery></Gallery>
+            <Route exact path="/gallery" element={<Gallery/>}>
             </Route>
-            <Route exact path="/explore">
-              <Explores></Explores>
+            <Route exact path="/explore" element={<Explores/>}>
             </Route>
-            <PrivateRoute path="/dashboard">
-              <Dashboard></Dashboard>
-            </PrivateRoute>
-            <PrivateRoute exact path="/order/:key">
-              <Order></Order>
-            </PrivateRoute>
-            <Route path="*">
-              <Notfound></Notfound>
+            <Route path="/dashboard" element={<PrivateRoute>
+             <Dashboard/>
+            </PrivateRoute>}>
+            <Route path={`/dashboard/pay`} 
+            element={<Pay/>}>
+                    </Route>
+                    <Route path={`/dashboard/review`} element={<Review/>}>
+                    </Route>
+                    <Route path={`/dashboard/myOrders`} element={<MyOrders/>}>
+                    </Route>
+                    <Route path={`/dashboard/makeAdmin`} element={<AdminRoute>
+                        <MakeAdmin/>
+                    </AdminRoute>}>
+                    </Route>
+                    <Route path={`/dashboard/addServices`} element={<AdminRoute>
+                        <AddServices/>
+                    </AdminRoute>}>
+                        
+                    </Route>
             </Route>
-          </Switch>
+            <Route exact path="/order/:key" element={<PrivateRoute>
+            <Order/>
+            </PrivateRoute>}>  
+            </Route>
+            <Route path="*" element={<Notfound/>}>
+            </Route>
+          </Routes>
         </BrowserRouter>
       </AuthProvider>
     </div>

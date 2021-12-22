@@ -1,12 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faYoutube } from '@fortawesome/free-brands-svg-icons';
-
+import { faFacebook, faGithub, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
-
 import Bounce from 'react-reveal/Bounce';
 
 const Footer = () => {
@@ -47,16 +42,22 @@ const Footer = () => {
         </div>
         <div className="icon">
         <Bounce left cascade>
-        <a href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook} /></a>
+        <a target="_blank" href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook} /></a>
         </Bounce>
         <Bounce top cascade>
-        <a href="https://www.instagram.com/"><FontAwesomeIcon icon={faInstagram} /></a>
+        <a target="_blank" href="https://twitter.com/home"><FontAwesomeIcon icon={faTwitter} /></a>
         </Bounce>
         <Bounce bottom cascade>
-        <a href="https://github.com/"><FontAwesomeIcon icon={faGithub} /></a>
+        <a target="_blank" href="https://www.linkedin.com/feed/"><FontAwesomeIcon icon={faLinkedin} /></a>
+        </Bounce>
+        <Bounce top cascade>
+        <a target="_blank" href="https://www.instagram.com/"><FontAwesomeIcon icon={faInstagram} /></a>
+        </Bounce>
+        <Bounce bottom cascade>
+        <a target="_blank" href="https://github.com/"><FontAwesomeIcon icon={faGithub} /></a>
         </Bounce>
         <Bounce right cascade>
-        <a href="https://www.youtube.com/channel/UCLD9CflKsqVox6JZLbKpt0Q"><FontAwesomeIcon icon={faYoutube} /></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCLD9CflKsqVox6JZLbKpt0Q"><FontAwesomeIcon icon={faYoutube} /></a>
         </Bounce>
         
          

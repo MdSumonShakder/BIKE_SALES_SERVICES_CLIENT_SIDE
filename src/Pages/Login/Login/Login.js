@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useAuth from "./../../../hooks/useAuth";
-import { useLocation, useHistory, NavLink } from "react-router-dom";
+import { useLocation, useNavigate, NavLink } from "react-router-dom";
 import "./Login.css";
 import { Spinner, Button } from "react-bootstrap";
 
@@ -9,7 +9,7 @@ const Login = () => {
   const { user, loginUser, signInWithGoogle, isLoading, authError } = useAuth();
 
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleOnChange = e => {
     const field = e.target.name;
@@ -19,12 +19,12 @@ const Login = () => {
     setLoginData(newLoginData);
   };
   const handleLoginSubmit = e => {
-    loginUser(loginData.email, loginData.password, location, history);
+    loginUser(loginData.email, loginData.password, location, navigate);
     e.preventDefault();
   };
 
   const handleGoogleSignIn = () => {
-    signInWithGoogle(location, history);
+    signInWithGoogle(location, navigate);
 
   };
   return (

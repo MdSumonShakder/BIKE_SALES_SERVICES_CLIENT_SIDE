@@ -16,19 +16,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import {
-    Switch,
-    Route,
     Link,
-    useRouteMatch
-} from "react-router-dom";
+    Outlet
+} 
+from "react-router-dom";
 import { Button } from '@mui/material';
-import AddServices from '../AddServices/AddServices';
-import Pay from '../Pay/Pay';
+
 import useAuth from './../../../hooks/useAuth';
-import MyOrders from '../MyOrders/MyOrders';
-import MakeAdmin from '../MakeAdmin/MakeAdmin';
-import AdminRoute from './../../Login/AdminRoute/AdminRoute';
-import Review from '../ReviewBox/Review';
 
 
 
@@ -44,7 +38,6 @@ function Dashboard(props) {
     const {admin}=useAuth();
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    let { path, url } = useRouteMatch();
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
@@ -54,12 +47,12 @@ function Dashboard(props) {
             <Toolbar />
             <Divider />
             <Link to="/home"><Button color="inherit">Home</Button></Link> <br/>
-            <Link to={`${url}/pay`}><Button color="inherit">Pay</Button></Link> <br/>
-            <Link to={`${url}/myOrders`}><Button color="inherit">MyOrders</Button></Link> <br/>
-            <Link to={`${url}/review`}><Button color="inherit">Review</Button></Link> <br/>
+            <Link to={`/dashboard/pay`}><Button color="inherit">Pay</Button></Link> <br/>
+            <Link to={`/dashboard/myOrders`}><Button color="inherit">MyOrders</Button></Link> <br/>
+            <Link to={`/dashboard/review`}><Button color="inherit">Review</Button></Link> <br/>
             {admin && <Box>
-            <Link to={`${url}/makeAdmin`}><Button color="inherit">MakeAdmin</Button></Link> <br/>
-            <Link to={`${url}/addServices`}><Button color="inherit">AddServices</Button></Link> <br/>
+            <Link to={`/dashboard/makeAdmin`}><Button color="inherit">MakeAdmin</Button></Link> <br/>
+            <Link to={`/dashboard/addServices`}><Button color="inherit">AddServices</Button></Link> <br/>
                 </Box>}
            
            
@@ -148,25 +141,7 @@ user?.email?
             >
                 <Toolbar />
 
-                <Switch>
-                   
-                    <Route path={`${path}/pay`}>
-                        <Pay></Pay>
-                    </Route>
-                    <Route path={`${path}/review`}>
-                      <Review></Review>
-                    </Route>
-                    <Route path={`${path}/myOrders`}>
-                        <MyOrders></MyOrders>
-                    </Route>
-                    <AdminRoute path={`${path}/makeAdmin`}>
-                        <MakeAdmin></MakeAdmin>
-                    </AdminRoute>
-                    <AdminRoute path={`${path}/addServices`}>
-                        <AddServices></AddServices>
-                    </AdminRoute>
-                </Switch>
-
+                <Outlet/>
             </Box>
         </Box>
     );

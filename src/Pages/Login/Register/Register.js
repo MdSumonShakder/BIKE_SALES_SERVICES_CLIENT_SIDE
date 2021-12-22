@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { NavLink, useHistory} from "react-router-dom";
+import { NavLink, useNavigate} from "react-router-dom";
 import useAuth from "./../../../hooks/useAuth";
 import {Button} from "react-bootstrap";
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});
-  const history = useHistory();
+  const navigate = useNavigate();
   
   const { user, registerUser, authError} = useAuth();
 
@@ -22,7 +22,7 @@ const Register = () => {
       return;
     };
 
-    registerUser(loginData.email, loginData.password, loginData.name, history);
+    registerUser(loginData.email, loginData.password, loginData.name, navigate);
     e.preventDefault();
   };
   return (
