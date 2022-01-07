@@ -16,8 +16,8 @@ const Explore = ({ explore }) => {
 
   return (
     <div className=" col-lg-4 col-md-6 col-12">
-      <div className="explore">
-        <img className="mb-3" src={img} alt="" />
+      <div className="explore text-center">
+        <img className="mb-3 img-fluid" src={img} alt="images" />
         <h5 className="text-primary fw-bolder ">{name}</h5>
         <h6>{price}</h6>
         <p>{description}</p>

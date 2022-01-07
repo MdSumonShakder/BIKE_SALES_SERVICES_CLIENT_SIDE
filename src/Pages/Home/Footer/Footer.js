@@ -40,7 +40,7 @@ const Footer = () => {
 
           </div> 
         </div>
-        <div className="icon">
+        <div className="icon text-center">
         <Bounce left cascade>
         <a target="_blank" href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook} /></a>
         </Bounce>
