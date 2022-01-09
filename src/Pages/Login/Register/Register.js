@@ -26,7 +26,7 @@ const Register = () => {
     e.preventDefault();
   };
   return (
-    <div className="login">
+    <div className="login text-center">
       <h1 className=" text-primary mt-5 pb-3 gum">Please Register</h1>
       <form onSubmit={handleLoginSubmit}>
           <input type="text" name="name" id=""  onBlur={handleOnBlur} placeholder="Enter Your Name" /> <br />

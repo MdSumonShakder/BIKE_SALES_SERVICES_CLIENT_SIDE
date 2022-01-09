@@ -62,7 +62,7 @@ function App() {
                         
                     </Route>
             </Route>
-            <Route exact path="/order/:key" element={<PrivateRoute>
+            <Route  path="/order/:key" element={<PrivateRoute>
             <Order/>
             </PrivateRoute>}>  
             </Route>
