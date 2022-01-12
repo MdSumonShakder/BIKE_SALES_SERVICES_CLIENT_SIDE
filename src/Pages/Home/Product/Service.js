@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router';
 const Service = ({ service }) => {
   const { _id, name, img, description, price } = service;
   const navigate = useNavigate();
-  const clickedDetails =_id => {
+  const clickedDetails =id => {
     const uri = `/order/${_id}`;
     navigate(uri);
 

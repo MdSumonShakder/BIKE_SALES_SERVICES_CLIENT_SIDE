@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import Home from "./Pages/Home/Home/Home";
 import Notfound from "./Pages/NotFound/Notfound";

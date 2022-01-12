@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 const Order = () => {
   const { key } = useParams();
-  const [details, setDetails] = useState({});
+  const [details, setDetails] = useState(0);
 
   useEffect(() => {
     fetch(`https://protected-temple-26182.herokuapp.com/products${key}`)
       .then((res) => res.json())
-      .then((data) => setDetails(data));
+      .then((data) => setDetails(data.products));
   }, [key]);
 
   return (

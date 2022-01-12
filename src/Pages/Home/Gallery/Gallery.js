@@ -23,7 +23,7 @@ const Gallery = () => {
   return (
     <div id="gallery" className="w-100 h-100">
       <div className="container mb-5">
-        <h1 className="gum mb-5 fw-bolder mt-5 pb-3">Our Bike Gallery</h1>
+        <h1 className="gum mb-5 fw-bolder mt-5 pb-3 text-center">Our Bike Gallery</h1>
         <Carousel fade>
         <Carousel.Item>
             <img
